@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  color: #171717;
+  background: #fff;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+.hero-content {
+  padding: 0;
+  max-width: 100%;
+}
+
+.css-cis11t-MuiFormGroup-root {
+  flex-direction: column !important;
+  align-items: flex-start !important;
+}
+
+.css-1vpwcmr-MuiGrid-root > .MuiGrid-item {
+  margin: 10px;
+}
+
+.css-1n04w30-MuiInputBase-root-MuiOutlinedInput-root.Mui-error
+  .MuiOutlinedInput-notchedOutline {
+  border-radius: 0.75rem;
+}
+
+.ag-root-wrapper {
+  border-radius: 1rem;
+}
+
+.customIcons {
+  height: 4rem;
+  width: 4rem;
+  fill: #ae8eff;
+}
