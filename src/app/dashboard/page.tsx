@@ -1,11 +1,26 @@
-import React from "react";
+"use client";
+
+import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import Leads from "../Components/Leads/Leads";
 import styles from "./dashboard.module.css";
+import { authenticateUser } from "../lib/sessions";
 
 const Dashboard = () => {
-  // return <Leads />;
+  useEffect(() => {
+    const username = prompt("Please enter username", "");
+    const password = prompt("Please enter password", "");
+
+    if (username?.length && password?.length) {
+      const isAuthenticated = authenticateUser(username, password);
+      if (!isAuthenticated) {
+        redirect("/");
+      }
+    }
+  }, []);
+
   return (
     <div className={styles.dashboardContainer}>
       <div className="drawer lg:drawer-open">

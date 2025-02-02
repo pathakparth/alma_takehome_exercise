@@ -5,11 +5,17 @@ import { GiPerspectiveDiceSixFacesTwo } from "react-icons/gi";
 import { HiDocumentText } from "react-icons/hi2";
 import { PiHeartDuotone } from "react-icons/pi";
 import { RiUploadCloud2Fill } from "react-icons/ri";
-import PersonalDataForm from "./PersonalDataForm";
-import VisaCategoryForm from "./VisaCategoryForm";
 import ResumeUploadForm from "./ResumeUploadForm";
 import HelpDescriptionForm from "./HelpDescriptionForm";
 import SubmitForm from "./SubmitForm";
+import dynamic from "next/dynamic";
+
+const PersonalDataForm = dynamic(() => import("./PersonalDataForm"), {
+  ssr: false,
+});
+const VisaCategoryForm = dynamic(() => import("./VisaCategoryForm"), {
+  ssr: false,
+});
 
 const initPersonalData = {};
 const initVisaCategoryData = {};

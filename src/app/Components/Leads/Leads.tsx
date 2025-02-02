@@ -135,7 +135,7 @@ const Leads = () => {
             className="select select-bordered max-w-xs rounded-2xl"
             onChange={statusFilterHandler}
           >
-            <option selected value="">
+            <option defaultValue="" value="">
               Status
             </option>
             <option value="Pending">Pending</option>
